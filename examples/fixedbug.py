@@ -12,4 +12,4 @@ C(_.Z).known_when(A(_.Z))
 B = Predicate("B")
 B(_.B).known_when(A(_.T), Equal(_.T, 1))
 
-print(B(_.B).all())
+print((B(_.B).all()))

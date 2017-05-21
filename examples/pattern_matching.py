@@ -9,7 +9,7 @@ def PrintEach(lst):
     for x in case(nil):
         print("end of message")
     for x in case.default:
-        print("/!\\ lst should be a list but got {}".format(x))
+        print(("/!\\ lst should be a list but got {}".format(x)))
 
 PrintEach(3)
 PrintEach(_["hello", "world"])

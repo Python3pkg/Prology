@@ -91,14 +91,14 @@ class Test(TestCase):
         except KeyError as e:
             assert True
         try:
-            print(a["x"])
+            print((a["x"]))
             assert False
         except KeyError as e:
             assert True
 
 
         try:
-            print(a.x)
+            print((a.x))
             assert False
         except AttributeError as e:
             assert True

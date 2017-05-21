@@ -9,10 +9,10 @@ append(cons(_.H, _.T), _.L2, cons(_.H, _.L3)).known_when(
 )  # more complex facts
 
 # Append [1, 2, 3] and [4, 5, 6], prints the result in Z
-print(append(plist(1, 2, 3), plist(4, 5, 6), _.Z).first[_.Z])
+print((append(plist(1, 2, 3), plist(4, 5, 6), _.Z).first[_.Z]))
 # Return first matching instance
-print(append(_.A, _.B, plist(1, 2, 3, 4, 5, 6, 7)).fill())
+print((append(_.A, _.B, plist(1, 2, 3, 4, 5, 6, 7)).fill()))
 # Returns if it was possible to find an answer
-print(append(_.A, _.B, plist(1, 2, 3, 4, 5, 6, 7)).ever())
+print((append(_.A, _.B, plist(1, 2, 3, 4, 5, 6, 7)).ever()))
 # Get all working substitutions
-print(append(_.A, _.B, plist(1, 2, 3, 4, 5, 6, 7)).all())
+print((append(_.A, _.B, plist(1, 2, 3, 4, 5, 6, 7)).all()))

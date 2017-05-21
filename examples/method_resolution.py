@@ -60,11 +60,11 @@ extends("cat", "animal").known()
 extends("mouse", "animal").known()
 extends("cat", generic("killer", _["mouse"])).known()  # Cat is a mouse killer
 
-print(instanceof("cat", _.B).all())
-print(instanceof("cat", generic("killer", _[_.B])).all())
-print(instanceof(generic("killer", _["mouse"]), generic("killer", _[_.B])).all())
+print((instanceof("cat", _.B).all()))
+print((instanceof("cat", generic("killer", _[_.B])).all()))
+print((instanceof(generic("killer", _["mouse"]), generic("killer", _[_.B])).all()))
 
 # A cage of killer of animal should contain cats
-print(instanceof(generic("killer", _["mouse"]), generic("killer", _["animal"])).all())
-print(instanceof("cat", generic("killer", _["animal"])).all())
-print(instanceof(generic("cage", _["cat"]), generic("cage", _[generic("killer", _["animal"])])).all())
+print((instanceof(generic("killer", _["mouse"]), generic("killer", _["animal"])).all()))
+print((instanceof("cat", generic("killer", _["animal"])).all()))
+print((instanceof(generic("cage", _["cat"]), generic("cage", _[generic("killer", _["animal"])])).all()))

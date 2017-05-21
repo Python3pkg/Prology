@@ -21,10 +21,10 @@ Push = Predicate("push")
 # We can only put B in A if B is an instance of B
 Push(plist("list", _.A), _.B).known_when(InstanceOf(_.B, _.A))
 
-print(Push(plist("list", "any"), _.A).all())  # What can we put into a list of "any"?
-print(Push(plist("list", "animal"), _.A).all())  # What can we put into a list of "animal"?
+print((Push(plist("list", "any"), _.A).all()))  # What can we put into a list of "any"?
+print((Push(plist("list", "animal"), _.A).all()))  # What can we put into a list of "animal"?
 
-print(Push(plist("list", _.A), "animal").all())  # In what kind of list can we put an "animal"?
+print((Push(plist("list", _.A), "animal").all()))  # In what kind of list can we put an "animal"?
 
 
 Collection = Predicate("collection")
@@ -41,8 +41,8 @@ Map(function(l(_.P), _.Rfun), l(_.C, _.Q), _.Rmap).known_when(
 )
 
 # Would it work to map a function of vehicle on a list of birds?
-print(Map(function(l("vehicle"), "bird"), l("list", "bird"), _.R).ever())
+print((Map(function(l("vehicle"), "bird"), l("list", "bird"), _.R).ever()))
 # What is the return type of this map?
-print(Map(function(l("vehicle"), "bird"), l("set", "car"), _.R).all())
+print((Map(function(l("vehicle"), "bird"), l("set", "car"), _.R).all()))
 # What can be the return type of a map with unbound collection?
-print(Map(function(l("vehicle"), "bird"), l(_.C, "car"), _.R).all())
+print((Map(function(l("vehicle"), "bird"), l(_.C, "car"), _.R).all()))
